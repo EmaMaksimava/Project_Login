@@ -1,0 +1,50 @@
+.login-page-wrapp {
+    height: 100vh;
+  }
+  
+  .login-form-wrap {
+    width: 50%;
+    background-image: url(../img/Spruce-beautiful-twigs_2560x1920.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    
+  }
+  
+  .login-form-wrap .form-card {
+    max-width: 500px;
+    width: 100%;
+    margin-right: 30px;
+    border: 2px solid rgb(2, 167, 2);
+    box-shadow: 5px 5px 10px rgba(0, 65, 0, 0.842);
+    background-color: honeydew;
+  }
+  
+  .login-form-wrap .form-card .card-title {
+    color: var(--teal);
+    text-shadow: 1px 1px 2px rgba(0, 88, 0, 0.795);
+  }
+  
+  .login-greeting-screen {
+    background: var(--green);
+    width: 50%;
+    padding: 20px;
+  }
+  
+  .login-greeting-screen .login-greeting-screen-text {
+    max-width: 500px;
+  }
+  
+  .login-greeting-screen .login-greeting-screen-text {
+    color: var(--white);
+    text-shadow: 2px 1px 2px rgba(255, 255, 255, 0.692);
+  }
+  
+  .login-greeting-screen .login-greeting-screen-title {
+    margin-bottom: 30px;
+    text-transform: capitalize;
+  }
+  
+  .login-greeting-screen .login-greeting-screen-description {
+    line-height: 1.4;
+  }
+  
