@@ -5,7 +5,7 @@ import UI from './config/ui.config';
 import { validate } from './helpers/validate';
 import { showInputError, removeInputError } from './views/form';
 import { login } from './services/auth.service';
-import { notify } from './views/notification';
+import { notify} from './views/notification';
 
 
 const { form, inputEmail, inputPassword } = UI;
@@ -32,14 +32,14 @@ async function onSubmit() {
 
     try {
         await login(inputEmail.ariaValueMax, inputPassword.value);
-        // show notify
+        form.reset();
+        notify({ msg: 'Login success', className: 'alert-success' })
     } catch(err) {
-        // show error
+        notify({ msg: 'Login faild', className: 'alert-danger' })
     }
 
-    form.reset();
+    
 }
 
-notify({msg: "Some notification 1", className: "alert-danger"});
-notify({msg: "Some notification 2", className: "alert-warning"});
-notify({msg: "Some notification 3", className: "alert-primary"});
+
+

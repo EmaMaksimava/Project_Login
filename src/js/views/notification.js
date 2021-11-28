@@ -43,7 +43,9 @@ export function notify( { msg = 'Info message', className = 'alert-info', timeou
     const template = alertTemplate(msg, className, index );
     const container = getContainer();
 
-    container.insertAdjacentHTML('beforeend', template)
+    container.insertAdjacentHTML('beforeend', template);
+
+    setTimeout(() => closeNotify(index), timeout)
 }
 
 export function closeNotify(index) {
@@ -56,7 +58,10 @@ export function closeNotify(index) {
     }
 
     if (!alert) {
-        console.log("Alert not found!");
+        console.warn("Alert not found!");
         return;
     }
+
+    const container = getContainer();
+    container.removeChild(alert);
 }
