@@ -10,6 +10,7 @@ module.exports = {
     polyfill: 'babel-polyfill',
     app: './js/app.js',
   },
+  devtool: 'inline-source-map',
   // Также webpack рекомендует явно указывать, в какой директории находятся исходные файлы проекта (ресурсы). Для этого следует использовать свойство context:
   context: path.resolve(__dirname, 'src'),
   devServer: {
@@ -20,7 +21,7 @@ module.exports = {
     historyApiFallback: true,
     noInfo: false,
     stats: 'minimal',
-    hot: true,
+    hot: true
   },
   module: {
     // Для того, чтобы трансформировать файл, используются специальные утилиты - загрузчики (loaders).
